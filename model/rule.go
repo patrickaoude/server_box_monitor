@@ -334,7 +334,7 @@ func (r *Rule) shouldNotifyTemperature(s []temperatureStatus, t *Threshold) (boo
 	}
 
 	switch t.ThresholdType {
-	case ThresholdTypeSize:
+	case ThresholdTypeTemperature:
 		ok, err := t.True(temp.Value)
 		if err != nil {
 			return false, nil, err
